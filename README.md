@@ -1,6 +1,6 @@
 ![alt text](JORFI_ISL_ENSKA_liggjandi_svart@4x_brink.png "Title")
 
-# LaTex template for Jökull journal
+# LaTeX template for Jökull journal
 
 This repository includes a class file, `jokull.cls`, to setup articles in the journal [Jökull](https://jokull.jorfi.is/) of the Icelandic Glaciological and Geological Societies.
 
