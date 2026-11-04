@@ -105,13 +105,17 @@ Tables should be as simple as possible and large tables should be avoided. Each 
 
 \subsection{Figures}
 
-All raster graphics must have a resolution between 300 and 600 ppi. The final figure scale should be adjusted to single (75 mm) or double column (155 mm) widths. Consider reduction when deciding the size of numbers, letters, symbols and line thickness. Obtain copyright permissions where needed.
+All raster graphics must have a resolution between 300 and 600 ppi. The final figure scale should be adjusted to single (75 mm) or double column (155 mm) widths. Consider reduction when deciding the size of numbers, letters, symbols and line thickness. Obtain copyright permissions where needed. Figure captions must be in both English and Icelandic.
 
 % Use 'figure' for a column-width figure.
 \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{JORFI_ISL_ENSKA_liggjandi_svart@4x_brink.png}
-    \caption{Use ``\texttt{\textbackslash begin\{figure\} ... \textbackslash end\{figure\}}'' for a column-width figure.}
+    \caption{
+    Use ``\texttt{\textbackslash begin\{figure\} ... \textbackslash end\{figure\}}'' for a column-width figure.
+    --
+    \textit{Íslenskur myndatexti er fyrir neðan þann enska.}
+    }
     \label{fig:ColWidthFig}
 \end{figure}
 
@@ -119,7 +123,11 @@ All raster graphics must have a resolution between 300 and 600 ppi. The final fi
 \begin{figure*}
     \centering
     \includegraphics[width=\linewidth]{JORFI_ISL_ENSKA_liggjandi_svart@4x_brink.png}
-    \caption{Use ``\texttt{\textbackslash begin\{figure*\} ... \textbackslash end\{figure*\}}'' for a full-width figure.}
+    \caption{
+    Use ``\texttt{\textbackslash begin\{figure*\} ... \textbackslash end\{figure*\}}'' for a full-width figure.
+    --
+    \textit{Íslenskur myndatexti er fyrir neðan þann enska.}
+    }
     \label{fig:FullWidthFig}
 \end{figure*}
 
