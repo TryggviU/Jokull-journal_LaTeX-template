@@ -57,13 +57,15 @@ Papers submitted to Jökull should report original and unpublished work which is
 
 \section{Manuscript format}
 
-Titles should be brief and informative, and an abbreviated title suitable for page headings is also required. This can done with the \verb"\title[]{}" command in the document preamble with the abbreviated title in the square brackets and the full article title in the curly brackets. Sections and subsections should be clearly headed, and are defined and formatted with \verb"\section{}", \verb"\subsection{}", and \verb"\subsubsection{}". Tables should be as simple as possible and large tables should be avoided. Each table should have a brief title. Submit revised text in MS Word or LaTex format and graphics in vector (eps) or raster (pdf, tif, jpg) format.
+Titles should be brief and informative, and an abbreviated title suitable for page headings is also required. This can done with the \verb"\title[]{}" command in the document preamble with the abbreviated title in the square brackets and the full article title in the curly brackets. Sections and subsections should be clearly headed, and are defined and formatted with \verb"\section{}", \verb"\subsection{}", and \verb"\subsubsection{}". Submit revised text in MS Word or LaTex format and graphics in vector (eps) or raster (pdf, tif, jpg) format.
 
 \subsection{Review}
 
 Instructions to the editor should be on a separate sheet. Double-space the printed text to allow room for reviewers to make annotations. To change the formatting of the document to be ready for review simply add \verb"[review]" to the document class definition as: 
-
-\verb"\documentclass[review]{jokull}"
+\begin{quote}
+    \verb"\documentclass[review]{jokull}"
+\end{quote}
+This introduces the required styling with double-spacing and linenumbers.
 
 
 
@@ -88,7 +90,7 @@ Align equations on equals signs where possible. Equations that extend beyond the
 \subsection{Tables}
 
 Tables should be as simple as possible and large tables should be avoided. Each table should have a brief title.
-\begin{table}
+\begin{table}[h]
     \centering
     \caption{Caption for a simple single-column table}
     \label{tab:table01}
@@ -105,14 +107,15 @@ Tables should be as simple as possible and large tables should be avoided. Each 
 
 All raster graphics must have a resolution between 300 and 600 ppi. The final figure scale should be adjusted to single (75 mm) or double column (155 mm) widths. Consider reduction when deciding the size of numbers, letters, symbols and line thickness. Obtain copyright permissions where needed.
 
-\begin{figure}
+% Use 'figure' for a column-width figure.
+\begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{JORFI_ISL_ENSKA_liggjandi_svart@4x_brink.png}
     \caption{Use ``\texttt{\textbackslash begin\{figure\} ... \textbackslash end\{figure\}}'' for a column-width figure.}
     \label{fig:ColWidthFig}
 \end{figure}
 
-% Change 'figure' to 'figure*' for a full width figure.
+% Use 'figure*' for a full width figure.
 \begin{figure*}
     \centering
     \includegraphics[width=\linewidth]{JORFI_ISL_ENSKA_liggjandi_svart@4x_brink.png}
@@ -122,7 +125,6 @@ All raster graphics must have a resolution between 300 and 600 ppi. The final fi
 
 \section{Referencing}
 
-References should be listed in alphabetical order at the end of the paper. Abbreviate the titles of periodicals mentioned in the list of references according to the International Serials Catalogue published by the International Council of Scientific Unions Abstracting Board (ISBN 92-9027-004-7). No automated way is currently included with this document to abbreviate the journal names, so authors must do so themselves. An easy way for those using JabRef to manage their references is to toggle the ``Abbreviate journal names'' in the Tools or Quality menus. Table \ref{tab:citation} lists most necessary citation commands to be used, and example \citep{Adalgeirsdottir_etal_2005}, \citep{Arnadottir_etal_2004} and \citep{Ingolfsson_etal_2016} for full references and journal abbreviations are displayed in the reference list.
 \begin{table*}
     \centering
     \caption{Examples of citations in a full-width table.}
@@ -140,6 +142,8 @@ References should be listed in alphabetical order at the end of the paper. Abbre
         \verb|\citeyear{jones90}|            & 1990 \\ \hline
         \end{tabular}
 \end{table*}
+
+References should be listed in alphabetical order at the end of the paper. Abbreviate the titles of periodicals mentioned in the list of references according to the International Serials Catalogue published by the International Council of Scientific Unions Abstracting Board (ISBN 92-9027-004-7). No automated way is currently included with this document to abbreviate the journal names, so authors must do so themselves. An easy way for those using JabRef to manage their references is to toggle the ``Abbreviate journal names'' in the Tools or Quality menus. Table \ref{tab:citation} lists most necessary citation commands to be used, and example \citep{Adalgeirsdottir_etal_2005}, \citep{Arnadottir_etal_2004} and \citep{Ingolfsson_etal_2016} for full references and journal abbreviations are displayed in the reference list.
 
 The reference list is here accomplished by using the \verb"chicago" style to be in line with the Jökull style guides. However, this does exclude URL and DOI links from the references. To include URL and DOI links, download the \verb"chicagolinks.bst" bibliography standard file from \url{https://ctan.org/tex-archive/biblio/bibtex/contrib/chicagolinks} and include in the file tree of the manuscript.
 
