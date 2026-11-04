@@ -1,5 +1,5 @@
-\documentclass{jokull}
-% \documentclass[review]{jokull} % Use this line instead of the above one when submitting for review.
+% \documentclass{jokull}
+\documentclass[review]{jokull} % Use this line instead of the above one when submitting for review.
 
 \usepackage[utf8]{inputenc}
 
@@ -127,7 +127,7 @@ All raster graphics must have a resolution between 300 and 600 ppi. The final fi
 
 \begin{table*}
     \centering
-    \caption{Examples of citations in a full-width table.}
+    \caption{Examples of \texttt{natbib} citations in a full-width table.}
     \label{tab:citation}
     \begin{tabular}{lr}
         \hline
@@ -143,9 +143,13 @@ All raster graphics must have a resolution between 300 and 600 ppi. The final fi
         \end{tabular}
 \end{table*}
 
-References should be listed in alphabetical order at the end of the paper. Abbreviate the titles of periodicals mentioned in the list of references according to the International Serials Catalogue published by the International Council of Scientific Unions Abstracting Board (ISBN 92-9027-004-7). No automated way is currently included with this document to abbreviate the journal names, so authors must do so themselves. An easy way for those using JabRef to manage their references is to toggle the ``Abbreviate journal names'' in the Tools or Quality menus. Table \ref{tab:citation} lists most necessary citation commands to be used, and example \citep{Adalgeirsdottir_etal_2005}, \citep{Arnadottir_etal_2004} and \citep{Ingolfsson_etal_2016} for full references and journal abbreviations are displayed in the reference list.
+References should be listed in alphabetical order at the end of the paper. Abbreviate the titles of periodicals mentioned in the list of references according to the International Serials Catalogue published by the International Council of Scientific Unions Abstracting Board (ISBN 92-9027-004-7). No automated way is currently included with this document to abbreviate the journal names, so authors must do so themselves. An easy way for those using JabRef to manage their references is to toggle the ``Abbreviate journal names'' in the Tools or Quality menus. This template uses the package \verb"natbib" to manage citations, and Table \ref{tab:citation} lists most necessary citation commands to be used. Further, the examples: \citep{Adalgeirsdottir_etal_2005}, \citep{Arnadottir_etal_2004} and \citep{Ingolfsson_etal_2016}; are included in the \verb"references.bib" bibliography file to display full references and journal abbreviations in the reference list.
 
-The reference list is here accomplished by using the \verb"chicago" style to be in line with the Jökull style guides. However, this does exclude URL and DOI links from the references. To include URL and DOI links, download the \verb"chicagolinks.bst" bibliography standard file from \url{https://ctan.org/tex-archive/biblio/bibtex/contrib/chicagolinks} and include in the file tree of the manuscript.
+The reference list is here accomplished by using the \verb"chicago" style to be in line with the Jökull style guides. However, this does exclude URL and DOI links from the references. To include URL and DOI links, download the \verb"chicagolinks.bst" bibliography standard file from \url{https://ctan.org/tex-archive/biblio/bibtex/contrib/chicagolinks}, include it in the file tree of the manuscript, and change the \verb"bibliographystyle" command to
+\begin{quote}
+    \verb"\bibliographystyle{chicagolinks}"
+\end{quote}
+This should include all URL and DOI links that are in the \verb".bib" bibliography file.
 
 
 \acknowledgements{TEXT}
