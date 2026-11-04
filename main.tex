@@ -1,0 +1,158 @@
+\documentclass{jokull}
+% \documentclass[review]{jokull} % Use this line instead of the above one when submitting for review.
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx} % Images
+\usepackage[separate-uncertainty=true, multi-part-units=single]{siunitx} % SI units
+% If further non-SI units are required then they can be declared, e.g.:
+\DeclareSIUnit\year{a}
+\DeclareSIUnit\day{d}
+
+\begin{document}
+
+\title[Abbreviated title]{Full article title}
+
+\author[Author et al.]{
+    First Author$^1$, Second Author$^2$, Third Author$^3$, and Last Author$^4$
+}
+
+\affiliation{
+    $^1$First affiliation \\
+    $^2$Second affiliation \\
+    $^3$Third affiliation \\
+    $^4$Last affiliation \\
+}
+
+\email{address@somewhere.is} % The email of the corresponding author (marked with * in the author list).
+
+\setcounter{page}{1} % Set the article start page
+\jourvolume{76}      % set the journal volume
+\jourpubyear{2026}   % Set the journal year
+\jourdoi{10.ToBeDetermined} % Set the journal DOI (only use the number identifier not the full link)
+
+\begin{frontmatter}
+
+\maketitle
+
+\begin{abstract}
+    The abstract should be a single paragraph that states the nature of the investigation and summarises the conclusions drawn. The abstract should not exceed 300 words. References should not be cited in an abstract and abbreviations should be avoided. Words to be printed in italics should be \underline{underlined}. 
+\end{abstract}
+
+\end{frontmatter}
+
+
+
+\section{Scope and policy of the journal}
+
+Jökull publishes research papers, notes and review articles concerning all aspects of the Earth Sciences. The journal is primarily aimed at being an international forum for geoscience research in Iceland. Specific areas of coverage include glaciology, glacial geology, physical geography, general geology, petrology, volcanology, geothermal research, geophysics, meteorology, hydrology and oceanography. Jökull also publishes research notes and reports from glacier expeditions, book reviews, and material of interest to the members of the Icelandic Glaciological and Geological Societies.
+
+
+
+\section{Submission of manuscripts}
+
+Papers submitted to Jökull should report original and unpublished work which is not being considered for publication elsewhere. An electronic copy of each paper should be emailed to one of the editors. Text should be linenumbered with double line spacing, single column and full page width. Accepted languages are Icelandic and English. Reviewed articles must include an abstract and figure text in both languages. If needed, the editors reserve the right to translate the abstract and figure captions. Each paper is reviewed by at least two independent referees. Upon acceptance, we request a copy of the final manuscript electronically. Short to moderate length papers are encouraged. Papers will typically be limited to 20 pages in Jökull format.
+
+
+
+\section{Manuscript format}
+
+Titles should be brief and informative, and an abbreviated title suitable for page headings is also required. This can done with the \verb"\title[]{}" command in the document preamble with the abbreviated title in the square brackets and the full article title in the curly brackets. Sections and subsections should be clearly headed, and are defined and formatted with \verb"\section{}", \verb"\subsection{}", and \verb"\subsubsection{}". Tables should be as simple as possible and large tables should be avoided. Each table should have a brief title. Submit revised text in MS Word or LaTex format and graphics in vector (eps) or raster (pdf, tif, jpg) format.
+
+\subsection{Review}
+
+Instructions to the editor should be on a separate sheet. Double-space the printed text to allow room for reviewers to make annotations. To change the formatting of the document to be ready for review simply add \verb"[review]" to the document class definition as: 
+
+\verb"\documentclass[review]{jokull}"
+
+
+
+\subsection{Mathematics and units}
+
+Formulae and algebraic symbols should be indicated clearly, equations numbered sequentially, and the meaning of all symbols given. Algebraic symbols for physical quantities should follow the recommendations of the Commission for Symbols, Units and Nomenclature of the International Union of Pure and Applied Physics. For example, following is the continuity equation for glaciers
+\begin{equation}\label{eq:ContinuityEquation}
+    \frac{\partial h}{\partial t} = - \nabla \cdot q + \dot{b},
+\end{equation}
+where $h$ denotes glacier thickness, $t$ is time, $q$ is ice flux, and $\dot{b}$ is the mass balance rate. The International System of Units, denoted SI, should be used throughout for numerical data. Here we use the \verb"siunitx" package to handle all SI units (see documentation here: \url{https://ctan.org/pkg/siunitx}). Here are some examples: \qty{1}{\metre\per\second\cubed}, \qty{1.2e-12}{\pascal^{-3}\second^{-1}}, \qtyrange{1}{2}{\degree}, and \qtyrange[range-phrase=--,range-units=single]{1}{2}{\metre}.
+
+Align equations on equals signs where possible. Equations that extend beyond the one-column measure should be turned over before an operator.
+\begin{equation}
+\begin{split}
+    q = & \int_0^L \dot{b} \mathrm{d} x \\
+    = & \Gamma_{\mathrm{ac}} \int_0^{x_{\rm ELA}} (z_{\rm max} - m_{\rm b} \, x + h - z_{\rm ELA}) \mathrm{d}x \\
+    & + \Gamma_{\mathrm{ab}} \int_{x_{\rm ELA}}^L (z_{\rm max} - m_{\rm b} \, x + h - z_{\rm ELA}) \mathrm{d}x \\
+\end{split}
+\end{equation}
+
+\subsection{Tables}
+
+Tables should be as simple as possible and large tables should be avoided. Each table should have a brief title.
+\begin{table}
+    \centering
+    \caption{Caption for a simple single-column table}
+    \label{tab:table01}
+    \begin{tabular}{ll}
+        \hline
+        Íslensk orð & English translation \\ \hline
+        Jökull & Glacier \\
+        Eldfjall & Volcano \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\subsection{Figures}
+
+All raster graphics must have a resolution between 300 and 600 ppi. The final figure scale should be adjusted to single (75 mm) or double column (155 mm) widths. Consider reduction when deciding the size of numbers, letters, symbols and line thickness. Obtain copyright permissions where needed.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{JORFI_ISL_ENSKA_liggjandi_svart@4x_brink.png}
+    \caption{Use ``\texttt{\textbackslash begin\{figure\} ... \textbackslash end\{figure\}}'' for a column-width figure.}
+    \label{fig:ColWidthFig}
+\end{figure}
+
+% Change 'figure' to 'figure*' for a full width figure.
+\begin{figure*}
+    \centering
+    \includegraphics[width=\linewidth]{JORFI_ISL_ENSKA_liggjandi_svart@4x_brink.png}
+    \caption{Use ``\texttt{\textbackslash begin\{figure*\} ... \textbackslash end\{figure*\}}'' for a full-width figure.}
+    \label{fig:FullWidthFig}
+\end{figure*}
+
+\section{Referencing}
+
+References should be listed in alphabetical order at the end of the paper. Abbreviate the titles of periodicals mentioned in the list of references according to the International Serials Catalogue published by the International Council of Scientific Unions Abstracting Board (ISBN 92-9027-004-7). No automated way is currently included with this document to abbreviate the journal names, so authors must do so themselves. An easy way for those using JabRef to manage their references is to toggle the ``Abbreviate journal names'' in the Tools or Quality menus. Table \ref{tab:citation} lists most necessary citation commands to be used, and example \citep{Adalgeirsdottir_etal_2005}, \citep{Arnadottir_etal_2004} and \citep{Ingolfsson_etal_2016} for full references and journal abbreviations are displayed in the reference list.
+\begin{table*}
+    \centering
+    \caption{Examples of citations in a full-width table.}
+    \label{tab:citation}
+    \begin{tabular}{lr}
+        \hline
+        Command                        & Example result \\ \hline
+        \verb|\citet{jones90}|               & Jones et al. (1990) \\
+        \verb|\citep{jones90}|               & (Jones et al., 1990) \\
+        \verb|\citep{jones90,jones93}|       & (Jones et al., 1990, 1993) \\
+        \verb|\citep[p.~32]{jones90}|        & (Jones et al., 1990, p.~32) \\
+        \verb|\citep[e.g.,][]{jones90}|      & (e.g., Jones et al., 1990) \\
+        \verb|\citep[e.g.,][p.~32]{jones90}| & (e.g., Jones et al., 1990, p.~32) \\
+        \verb|\citeauthor{jones90}|          & Jones et al. \\
+        \verb|\citeyear{jones90}|            & 1990 \\ \hline
+        \end{tabular}
+\end{table*}
+
+The reference list is here accomplished by using the \verb"chicago" style to be in line with the Jökull style guides. However, this does exclude URL and DOI links from the references. To include URL and DOI links, download the \verb"chicagolinks.bst" bibliography standard file from \url{https://ctan.org/tex-archive/biblio/bibtex/contrib/chicagolinks} and include in the file tree of the manuscript.
+
+
+\acknowledgements{TEXT}
+\dataavailability{TEXT}
+\codeavailability{TEXT}
+\authorcontribution{TEXT}
+
+\icelandicsummary{Ágrip á Íslensku}{TEXT}
+
+% Bibliography
+\bibliography{references}
+\bibliographystyle{chicago}
+% \bibliographystyle{chicagolinks} % to be used if chicagolinks.bst has been downloaded from https://ctan.org/tex-archive/biblio/bibtex/contrib/chicagolinks
+
+\end{document}
