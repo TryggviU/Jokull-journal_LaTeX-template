@@ -27,7 +27,7 @@
 \RequirePackage{caption}
 \DeclareCaptionJustification{double}{\doublespacing}
 \DeclareCaptionLabelSeparator{dotquad}{.\quad}
-\RequirePackage[explicit]{titlesec}
+\RequirePackage[explicit,noindentafter]{titlesec}
 \RequirePackage[style]{abstract}
 \RequirePackage{fancyhdr}
 \RequirePackage{url}
@@ -136,6 +136,10 @@
   {0pt}
   {#1}
 
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
 \newcommand{\acknowledgements}[1]{\subsection*{Acknowledgements} #1}
 \newcommand{\dataavailability}[1]{\subsubsection*{Data availability} #1}
 \newcommand{\codeavailability}[1]{\subsubsection*{Code availability} #1}
@@ -151,6 +155,7 @@
 
 \RequirePackage{natbib}
 \renewcommand{\bibfont}{\small}
+\setlength{\bibsep}{0pt plus 0.3ex}
 
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
