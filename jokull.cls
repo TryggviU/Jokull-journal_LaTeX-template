@@ -1,7 +1,7 @@
 % This is a LaTeX class class file for the journal Jökull of the Icelandic Glaciological and Geological Societies.
 % The Jökull class is largely based on the IGS Journal of Glaciology class: https://www.cambridge.org/core/journals/journal-of-glaciology and has been edited and improved to allow for Icelandic typesetting and to follow the style guidelines of Jökull.
 % Author: Tryggvi Unnsteinsson
-% Version date: 2026-11-04
+% Version date: 2026-11-12
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{jokull}
 
@@ -14,14 +14,24 @@
 \if@reviewmode
   \LoadClass[11pt,oneside,onecolumn]{article}
 \else
-  \LoadClass[10pt,twoside,twocolumn,letterpaper]{article}
+  \LoadClass[10pt,twoside,twocolumn]{article}
 \fi
 
 \RequirePackage[T1]{fontenc}
 \RequirePackage{setspace}
 \RequirePackage{amsmath}
 \RequirePackage{xpatch}
-\RequirePackage[inner=1.3in, outer=1in, top=1.75in, bottom=1.75in, columnsep=0.5cm]{geometry}
+\RequirePackage[
+    letterpaper,  % Default 8.5 x 11 inches (215.9 x 279.4 mm)
+    % papersize={18cm,25cm},
+    textwidth=155mm,
+    columnsep=5mm,
+    bindingoffset=10mm,
+    inner=25.5mm, 
+    top=45mm, 
+    bottom=45mm, 
+    heightrounded,
+    ]{geometry}
 \RequirePackage{footmisc}
 \RequirePackage[table]{xcolor}
 \RequirePackage{caption}
