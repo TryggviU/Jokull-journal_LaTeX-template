@@ -1,8 +1,6 @@
 \documentclass{jokull}
 % \documentclass[review]{jokull} % Use this line instead of the above one when submitting for review.
 
-\usepackage[utf8]{inputenc}
-
 \usepackage{graphicx} % Images
 \usepackage[separate-uncertainty=true, multi-part-units=single]{siunitx} % SI units
 % If further non-SI units are required then they can be declared, e.g.:
@@ -159,13 +157,27 @@ The reference list is here accomplished by using the \verb"chicago" style to be 
 \end{quote}
 This should include all URL and DOI links that are in the \verb".bib" bibliography file.
 
+Note that in \LaTeX, bibliographies may sometimes not correctly sort (Icelandic-) special characters, i.e. Áá, Ðð, Éé, Íí, Óó, Úú, Ýý, Þþ, Ææ, og Öö. This can be fixed by including the command:
+\begin{quote}
+    \verb|@preamble{|
+    
+    \verb|" \newcommand{\noopsort}[1]{} " |
+    
+    \verb|}|
+\end{quote}
+at the start of the \verb|.bib| file, and using the command \verb|\noopsort{...}|, with an ASCII equivalent character, in front of special characters in entries. For example, here's how the last author name in bib entry for \citet{Gudmundsson_etal_2019} is formatted:
+\begin{quote}
+    \verb|Gu{\noopsort{d}}{\dh}mundsson|
+\end{quote}
+which can be contrasted with \citet{Gudmundsson_etal_2007} in the bibliography.
 
+% The following sections are optional - comment them out if not needed.
 \acknowledgements{TEXT}
 \dataavailability{TEXT}
 \codeavailability{TEXT}
 \authorcontribution{TEXT}
 
-\icelandicsummary{Ágrip á Íslensku}{TEXT}
+\icelandicsummary{Ágrip á Íslensku}{TEXTI}
 
 % Bibliography
 \bibliography{references}

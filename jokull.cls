@@ -1,7 +1,7 @@
 % This is a LaTeX class class file for the journal Jökull of the Icelandic Glaciological and Geological Societies.
 % The Jökull class is largely based on the IGS Journal of Glaciology class: https://www.cambridge.org/core/journals/journal-of-glaciology and has been edited and improved to allow for Icelandic typesetting and to follow the style guidelines of Jökull.
 % Author: Tryggvi Unnsteinsson
-% Version date: 2026-11-12
+% Version date: 2026-11-13
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{jokull}
 
@@ -42,8 +42,8 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{url}
 \RequirePackage[hidelinks]{hyperref} % Links and citations are black but still clickable.
-\RequirePackage{doi}
-\renewcommand{\doitext}{https://doi.org/}
+\urlstyle{same}
+\newcommand{\doi}[1]{\url{https://doi.org/#1}} % Create clickable DOI links.
 
 \if@reviewmode
   \RequirePackage{lmodern}
@@ -135,7 +135,7 @@
   {\MakeUppercase{#1}}
   
 \titleformat{\subsection}
-  {\large\bfseries\raggedright}
+  {\bfseries\raggedright}
   {} % \thesubsection
   {0pt}
   {#1}
@@ -154,7 +154,7 @@
 \newcommand{\dataavailability}[1]{\subsubsection*{Data availability} #1}
 \newcommand{\codeavailability}[1]{\subsubsection*{Code availability} #1}
 \newcommand{\authorcontribution}[1]{\subsubsection*{Author contributions} #1}
-\newcommand{\icelandicsummary}[2]{\subsection*{#1} #2}
+\newcommand{\icelandicsummary}[2]{\large\subsection*{#1} #2}
 
 \if@reviewmode
   \captionsetup*{font={small,doublespacing},labelfont=bf,labelsep=dotquad,justification=justified,singlelinecheck=false}
