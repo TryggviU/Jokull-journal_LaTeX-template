@@ -154,7 +154,7 @@
 \newcommand{\dataavailability}[1]{\subsubsection*{Data availability} #1}
 \newcommand{\codeavailability}[1]{\subsubsection*{Code availability} #1}
 \newcommand{\authorcontribution}[1]{\subsubsection*{Author contributions} #1}
-\newcommand{\icelandicsummary}[2]{\large\subsection*{#1} #2}
+\newcommand{\icelandicsummary}[2]{\subsection*{#1} #2}
 
 \if@reviewmode
   \captionsetup*{font={small,doublespacing},labelfont=bf,labelsep=dotquad,justification=justified,singlelinecheck=false}
