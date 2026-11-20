@@ -73,7 +73,7 @@ Formulae and algebraic symbols should be indicated clearly, equations numbered s
 \begin{equation}\label{eq:ContinuityEquation}
     \frac{\partial h}{\partial t} = - \nabla \cdot q + \dot{b},
 \end{equation}
-where $h$ denotes glacier thickness, $t$ is time, $q$ is ice flux, and $\dot{b}$ is the mass balance rate. The International System of Units, denoted SI, should be used throughout for numerical data. Here we use the \verb"siunitx" package to handle all SI units (see documentation here: \url{https://ctan.org/pkg/siunitx}). Here are some examples: \qty{1}{\metre\per\second\cubed}, \qty{1.2e-12}{\pascal^{-3}\second^{-1}}, \qtyrange{1}{2}{\degree}, and \qtyrange[range-phrase=--,range-units=single]{1}{2}{\metre}.
+where $h$ denotes glacier thickness, $t$ is time, $q$ is ice flux, and $\dot{b}$ is the mass balance rate. The International System of Units, denoted SI, should be used throughout for numerical data. Here we use the \verb"siunitx" package to handle all SI units (see documentation here: \url{https://ctan.org/pkg/siunitx}). Here are some examples: \qty{1}{\metre\per\second\cubed}, \qty{1.2e-12}{\pascal^{-3}\second^{-1}}, \qtyrange{1}{2}{\degree}, \qtyrange[range-phrase=--,range-units=single]{1}{2}{\metre}, user-defined units \qty{10}{\metre\per\year} (`a' for `annus': year in Latin), and with uncertainty \qty{10(2)}{\metre\per\year}.
 
 Align equations on equals signs where possible. Equations that extend beyond the one-column measure should be turned over before an operator.
 \begin{equation}
@@ -88,7 +88,7 @@ Align equations on equals signs where possible. Equations that extend beyond the
 \subsection{Tables}
 
 Tables should be as simple as possible and large tables should be avoided. Each table should have a brief title.
-\begin{table}[h]
+\begin{table}[ht]
     \centering
     \caption{Caption for a simple single-column table}
     \label{tab:table01}
@@ -106,11 +106,11 @@ Tables should be as simple as possible and large tables should be avoided. Each 
 All raster graphics must have a resolution between 300 and 600 ppi. The final figure scale should be adjusted to single (75 mm) or double column (155 mm) widths. Consider reduction when deciding the size of numbers, letters, symbols and line thickness. Obtain copyright permissions where needed. Figure captions must be in both English and Icelandic.
 
 % Use 'figure' for a column-width figure.
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{JORFI_ISL_ENSKA_liggjandi_svart@4x_brink.png}
     \caption{
-    Use ``\texttt{\textbackslash begin\{figure\} ... \textbackslash end\{figure\}}'' for a column-width figure.
+    Use ``\texttt{\textbackslash begin\{figure\}} ... \texttt{\textbackslash end\{figure\}}'' for a column-width figure.
     --
     \textit{Íslenskur myndatexti er fyrir neðan þann enska.}
     }
@@ -165,11 +165,11 @@ Note that in \LaTeX, bibliographies may sometimes not correctly sort (Icelandic-
     
     \verb|}|
 \end{quote}
-at the start of the \verb|.bib| file, and using the command \verb|\noopsort{...}|, with an ASCII equivalent character, in front of special characters in entries. For example, here's how the last author name in bib entry for \citet{Gudmundsson_etal_2019} is formatted:
+at the start of the \verb|.bib| file, and using the command \verb|\noopsort{...}|, with an ASCII equivalent character(s), in front of special characters in entries. For example, here's how the last author name in bib entry for \citet{Gudmundsson_etal_2019} is formatted:
 \begin{quote}
-    \verb|Gu{\noopsort{d}}{\dh}mundsson|
+    \verb|Gu{\noopsort{dz}}{\dh}mundsson|
 \end{quote}
-which can be contrasted with \citet{Gudmundsson_etal_2007} in the bibliography.
+which can be contrasted with \citet{Gudmundsson_etal_2007} in the bibliography. The use of ``dz'' for ``{\dh}'' guarantees the alphabetical order `... d, {\dh}, e, ...'.
 
 % The following sections are optional - comment them out if not needed.
 \acknowledgements{TEXT}
