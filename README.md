@@ -15,3 +15,5 @@ whereas for the final arcticle form simply use:
 \documentclass{jokull}
 ```
 at the start of the article `.tex` file.
+
+The default bibliography style is `chicago`, but I recommend downloading the [chicagolinks](https://ctan.org/tex-archive/biblio/bibtex/contrib/chicagolinks) BibTeX Style file (`chicagolinks.bst`) to allow for notes, URL and DOI links in the bibliography.
