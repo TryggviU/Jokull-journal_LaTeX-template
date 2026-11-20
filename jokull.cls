@@ -1,7 +1,7 @@
 % This is a LaTeX class file for the journal Jökull of the Icelandic Glaciological and Geological Societies.
 % The Jökull class is largely based on the IGS Journal of Glaciology class: https://www.cambridge.org/core/journals/journal-of-glaciology and has been edited and improved to allow for Icelandic typesetting and to follow the style guidelines of Jökull.
 % Author: Tryggvi Unnsteinsson
-% Version date: 2026-11-13
+% Version date: 2026-11-20
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{jokull}
 
